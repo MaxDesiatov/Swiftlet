@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FileCheck",
+        "repositoryURL": "https://github.com/trill-lang/FileCheck.git",
+        "state": {
+          "branch": null,
+          "revision": "1c966580c83cf2e41be802992d46fe2edfc5c95f",
+          "version": "0.0.5"
+        }
+      },
+      {
+        "package": "LLVM",
+        "repositoryURL": "https://github.com/llvm-swift/LLVMSwift",
+        "state": {
+          "branch": null,
+          "revision": "1e1f638d919e7e99661a05fc705ceec10635f8c8",
+          "version": "0.2.1"
+        }
+      },
+      {
+        "package": "SwiftParsec",
+        "repositoryURL": "https://github.com/davedufresne/SwiftParsec",
+        "state": {
+          "branch": null,
+          "revision": "5ab615f5179dd21a1d997cca3c09ca359a6818b7",
+          "version": "3.0.0"
+        }
+      },
+      {
+        "package": "cllvm",
+        "repositoryURL": "https://github.com/trill-lang/cllvm.git",
+        "state": {
+          "branch": null,
+          "revision": "e85a8ebe9f45cff9fa31b43c32662318232b392a",
+          "version": "0.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
