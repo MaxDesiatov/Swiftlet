@@ -1,52 +1,92 @@
-import LLVM
+import Venice
 
-let module = Module(name: "Fibonacci")
-let builder = IRBuilder(module: module)
+class Future<T> {
+  private var coroutine: Coroutine! = nil
+  private let channel: Channel<T>
+  private let deadline: Deadline
+  private var result: T?
+  private var error: Error?
+  private var success: ((T) -> ())?
+  private var failure: ((Error) -> ())?
 
-let function = builder.addFunction(
-"calculateFibs",
-type: FunctionType(argTypes: [IntType.int1],
-                    returnType: FloatType.double)
-)
-let entryBB = function.appendBasicBlock(named: "entry")
-builder.positionAtEnd(of: entryBB)
+  init(_ deadline: Deadline = .never, _ closure: @escaping () throws -> T) throws {
+    channel = try Channel<T>()
+    self.deadline = deadline
 
-// allocate space for a local value
-let local = builder.buildAlloca(type: FloatType.double, name: "local")
+    coroutine = try Coroutine { [weak self] in
+      do {
+        let res = try closure()
+        self?.result = res
+        self?.success?(res)
+        try self?.channel.send(res, deadline: deadline)
+      } catch {
+        self?.error = error
+        self?.failure?(error)
+      }
+    }
+  }
 
-// Compare to the condition
-let test = builder.buildICmp(function.parameters[0], IntType.int1.zero(), .equal)
+  func wait() throws -> T {
+    return try channel.receive(deadline: deadline)
+  }
 
-// Create basic blocks for "then", "else", and "merge"
-let thenBB = function.appendBasicBlock(named: "then")
-let elseBB = function.appendBasicBlock(named: "else")
-let mergeBB = function.appendBasicBlock(named: "merge")
+  func then(_ success: @escaping (T) -> (), failure: ((Error) -> ())? = nil) {
+    if let error = error {
+      failure?(error)
+    } else if let result = result {
+      success(result)
+    } else {
+      self.success = success
+      self.failure = failure
+    }
+  }
+}
 
-builder.buildCondBr(condition: test, then: thenBB, else: elseBB)
+let future = try Future<Int> {
+  try Coroutine.wakeUp(5.second.fromNow())
+  return 42
+}
 
-// MARK: Then Block
-builder.positionAtEnd(of: thenBB)
-// local = 1/89, the fibonacci series (sort of)
-let thenVal = FloatType.double.constant(1/89)
-// Branch to the merge block
-builder.buildBr(mergeBB)
+class Generator<T>: Sequence, IteratorProtocol {
+  private let channel: Channel<T>
+  private var coroutine: Coroutine! = nil
+  private var isFinished = false
 
-// MARK: Else Block
-builder.positionAtEnd(of: elseBB)
-// local = 1/109, the fibonacci series (sort of) backwards
-let elseVal = FloatType.double.constant(1/109)
-// Branch to the merge block
-builder.buildBr(mergeBB)
+  init(_ closure: @escaping ((T) -> ()) -> ()) {
+    channel = try! Channel<T>()
 
-// MARK: Merge Block
-builder.positionAtEnd(of: mergeBB)
-let phi = builder.buildPhi(FloatType.double, name: "phi_example")
-phi.addIncoming([
-(thenVal, thenBB),
-(elseVal, elseBB),
-])
-builder.buildStore(phi, to: local)
-let ret = builder.buildLoad(local, name: "ret")
-builder.buildRet(ret)
+    coroutine = try! Coroutine { [weak self] in
+      closure { try! self?.channel.send($0, deadline: .never) }
+      self?.isFinished = true
+    }
+  }
 
-module.dump()
+  func next() -> T? {
+    return isFinished ? nil : try? channel.receive(deadline: .never)
+  }
+}
+
+let gen = Generator<Int> { yield in
+  var i = 0
+  var flag = true
+
+  future.then({
+    print("result is \($0)")
+    flag = false
+  }, failure: {
+    print($0)
+  })
+
+  while flag {
+    yield(i)
+    i += 1
+  }
+}
+
+for i in gen {
+  print(i)
+
+  try Coroutine.wakeUp(1.second.fromNow())
+}
+
+print("generator finished")

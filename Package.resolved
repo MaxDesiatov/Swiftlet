@@ -2,8 +2,17 @@
   "object": {
     "pins": [
       {
+        "package": "CLibdill",
+        "repositoryURL": "https://github.com/Zewo/CLibdill.git",
+        "state": {
+          "branch": null,
+          "revision": "08292f2dbff76f51b4cf514124699611743e3cab",
+          "version": "2.0.0"
+        }
+      },
+      {
         "package": "FileCheck",
-        "repositoryURL": "https://github.com/trill-lang/FileCheck.git",
+        "repositoryURL": "https://github.com/llvm-swift/FileCheck.git",
         "state": {
           "branch": null,
           "revision": "1c966580c83cf2e41be802992d46fe2edfc5c95f",
@@ -14,9 +23,9 @@
         "package": "LLVM",
         "repositoryURL": "https://github.com/llvm-swift/LLVMSwift",
         "state": {
-          "branch": null,
-          "revision": "1e1f638d919e7e99661a05fc705ceec10635f8c8",
-          "version": "0.2.1"
+          "branch": "master",
+          "revision": "d734db6c0ec274782440414fc1d186b988935a4e",
+          "version": null
         }
       },
       {
@@ -29,8 +38,17 @@
         }
       },
       {
+        "package": "Venice",
+        "repositoryURL": "https://github.com/Zewo/Venice.git",
+        "state": {
+          "branch": null,
+          "revision": "3e78449dfefac3ab2952200ff8a4fa0165ef415a",
+          "version": "0.20.0"
+        }
+      },
+      {
         "package": "cllvm",
-        "repositoryURL": "https://github.com/trill-lang/cllvm.git",
+        "repositoryURL": "https://github.com/llvm-swift/cllvm.git",
         "state": {
           "branch": null,
           "revision": "e85a8ebe9f45cff9fa31b43c32662318232b392a",
