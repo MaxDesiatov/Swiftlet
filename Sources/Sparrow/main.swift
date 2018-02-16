@@ -41,12 +41,6 @@ class Future<T> {
     }
   }
 }
-
-let future = try Future<Int> {
-  try Coroutine.wakeUp(5.second.fromNow())
-  return 42
-}
-
 class Generator<T>: Sequence, IteratorProtocol {
   private let channel: Channel<T>
   private var coroutine: Coroutine! = nil
@@ -64,6 +58,12 @@ class Generator<T>: Sequence, IteratorProtocol {
   func next() -> T? {
     return isFinished ? nil : try? channel.receive(deadline: .never)
   }
+}
+
+
+let future = try Future<Int> {
+  try Coroutine.wakeUp(5.second.fromNow())
+  return 42
 }
 
 let gen = Generator<Int> { yield in

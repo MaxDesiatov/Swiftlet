@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "OysterKit",
+        "repositoryURL": "https://github.com/SwiftStudies/OysterKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "9594861d49ac06adc7c2874e2f743da25f1ff1fc",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftParsec",
         "repositoryURL": "https://github.com/davedufresne/SwiftParsec",
         "state": {
