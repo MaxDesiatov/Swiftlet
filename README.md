@@ -1,3 +1,3 @@
-# Sparrow
+# Swiftlet
 
-A description of this package.
+A compiler of Swift to WebAssembly

@@ -1,6 +1,6 @@
 import XCTest
-@testable import SparrowTests
+@testable import SwiftletTests
 
 XCTMain([
-    testCase(SparrowTests.allTests),
+    testCase(SwiftletTests.allTests),
 ])
