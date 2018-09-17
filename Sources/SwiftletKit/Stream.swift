@@ -11,34 +11,34 @@ protocol Consumer {
   func next(_ input: Input)
 }
 
-protocol Producer {
+public protocol Producer {
   associatedtype Output
 
   mutating func next() -> [Result<Output>]
 }
 
-protocol Transformer {
+public protocol Transformer {
   associatedtype Input
   associatedtype Output
 
   func next(_ input: Input) -> [Result<Output>]
 }
 
-struct Chain<P, T>: Producer
+public final class Chain<P, T>: Producer
 where P: Producer, T: Transformer, P.Output == T.Input
 {
-  var producer: P
-  let transformer: T
-  var isFinished: Bool
+  private var producer: P
+  private let transformer: T
+  private(set) var isFinished: Bool
 
-  mutating func next() -> [Result<T.Output>] {
+public func next() -> [Result<T.Output>] {
     let values = producer.next()
     guard values.count > 0 else {
       isFinished = true
       return []
     }
 
-    let x = values.flatMap { producerOutput -> [Result<T.Output>] in
+    return values.flatMap { producerOutput -> [Result<T.Output>] in
       guard case .success(let output) = producerOutput else {
         if let lifted: Result<T.Output> = producerOutput.lift() {
           return [lifted]
@@ -49,12 +49,17 @@ where P: Producer, T: Transformer, P.Output == T.Input
       return self.transformer.next(output)
     }
 
-    return x
+  }
+
+  init(producer: P, transformer: T) {
+    self.producer = producer
+    self.transformer = transformer
+    isFinished = false
   }
 }
 
-extension Producer {
+public extension Producer {
   func pipe<T>(_ transformer: T) -> Chain<Self, T> {
-      return Chain(producer: self, transformer: transformer, isFinished: false)
+      return Chain(producer: self, transformer: transformer)
   }
 }
