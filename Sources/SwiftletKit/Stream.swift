@@ -31,7 +31,7 @@ where P: Producer, T: Transformer, P.Output == T.Input
   private let transformer: T
   private(set) var isFinished: Bool
 
-public func next() -> [Result<T.Output>] {
+  public func next() -> [Result<T.Output>] {
     let values = producer.next()
     guard values.count > 0 else {
       isFinished = true
@@ -48,7 +48,6 @@ public func next() -> [Result<T.Output>] {
       }
       return self.transformer.next(output)
     }
-
   }
 
   init(producer: P, transformer: T) {

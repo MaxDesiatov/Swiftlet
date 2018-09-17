@@ -9,22 +9,22 @@
 /* Begin PBXAggregateTarget section */
 		"Swiftlet::SwiftletPackageTests::ProductTarget" /* SwiftletPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_52 /* Build configuration list for PBXAggregateTarget "SwiftletPackageTests" */;
+			buildConfigurationList = OBJ_135 /* Build configuration list for PBXAggregateTarget "SwiftletPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_55 /* PBXTargetDependency */,
+				OBJ_138 /* PBXTargetDependency */,
 			);
 			name = SwiftletPackageTests;
 			productName = SwiftletPackageTests;
 		};
 		"Swiftlet::swiftlet::ProductTarget" /* swiftlet */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_66 /* Build configuration list for PBXAggregateTarget "swiftlet" */;
+			buildConfigurationList = OBJ_151 /* Build configuration list for PBXAggregateTarget "swiftlet" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_69 /* PBXTargetDependency */,
+				OBJ_154 /* PBXTargetDependency */,
 			);
 			name = swiftlet;
 			productName = swiftlet;
@@ -32,42 +32,91 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_29 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* main.swift */; };
-		OBJ_31 /* SwiftletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */; };
-		OBJ_38 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Error.swift */; };
-		OBJ_39 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Lexer.swift */; };
-		OBJ_40 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* LineReader.swift */; };
-		OBJ_41 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Result.swift */; };
-		OBJ_42 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Stream.swift */; };
-		OBJ_43 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Token.swift */; };
-		OBJ_50 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_61 /* SwiftletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SwiftletTests.swift */; };
-		OBJ_63 /* SwiftletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */; };
+		OBJ_102 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Package.swift */; };
+		OBJ_108 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_110 /* SwiftletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */; };
+		OBJ_111 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Splash::Splash::Product" /* Splash.framework */; };
+		OBJ_119 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Error.swift */; };
+		OBJ_120 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Lexer.swift */; };
+		OBJ_121 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* LineReader.swift */; };
+		OBJ_122 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Result.swift */; };
+		OBJ_123 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Stream.swift */; };
+		OBJ_124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Token.swift */; };
+		OBJ_126 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Splash::Splash::Product" /* Splash.framework */; };
+		OBJ_133 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_144 /* SwiftletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SwiftletTests.swift */; };
+		OBJ_146 /* SwiftletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */; };
+		OBJ_147 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Splash::Splash::Product" /* Splash.framework */; };
+		OBJ_72 /* CharacterSet+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CharacterSet+Contains.swift */; };
+		OBJ_73 /* Equatable+AnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Equatable+AnyOf.swift */; };
+		OBJ_74 /* Int+IsOdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Int+IsOdd.swift */; };
+		OBJ_75 /* Sequence+AnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Sequence+AnyOf.swift */; };
+		OBJ_76 /* Sequence+Occurrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Sequence+Occurrences.swift */; };
+		OBJ_77 /* String+IsNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* String+IsNumber.swift */; };
+		OBJ_78 /* String+PrefixChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* String+PrefixChecking.swift */; };
+		OBJ_79 /* String+Removing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* String+Removing.swift */; };
+		OBJ_80 /* Substring+HasSuffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Substring+HasSuffix.swift */; };
+		OBJ_81 /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Grammar.swift */; };
+		OBJ_82 /* SwiftGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* SwiftGrammar.swift */; };
+		OBJ_83 /* AttributedStringOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* AttributedStringOutputFormat.swift */; };
+		OBJ_84 /* HTMLOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* HTMLOutputFormat.swift */; };
+		OBJ_85 /* OutputBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* OutputBuilder.swift */; };
+		OBJ_86 /* OutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* OutputFormat.swift */; };
+		OBJ_87 /* SyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* SyntaxHighlighter.swift */; };
+		OBJ_88 /* SyntaxRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* SyntaxRule.swift */; };
+		OBJ_89 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Color.swift */; };
+		OBJ_90 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Font.swift */; };
+		OBJ_91 /* Theme+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Theme+Defaults.swift */; };
+		OBJ_92 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Theme.swift */; };
+		OBJ_93 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Segment.swift */; };
+		OBJ_94 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* TokenType.swift */; };
+		OBJ_95 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Tokenizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D19457E7214FFD4900319374 /* PBXContainerItemProxy */ = {
+		D1210C0C215039EA00E577F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Swiftlet::SwiftletKit";
 			remoteInfo = SwiftletKit;
 		};
-		D19457E8214FFD4900319374 /* PBXContainerItemProxy */ = {
+		D1210C0D215039EA00E577F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Splash::Splash";
+			remoteInfo = Splash;
+		};
+		D1210C0E215039EA00E577F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Splash::Splash";
+			remoteInfo = Splash;
+		};
+		D1210C0F215039EA00E577F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Swiftlet::SwiftletKit";
 			remoteInfo = SwiftletKit;
 		};
-		D19457E9214FFD4A00319374 /* PBXContainerItemProxy */ = {
+		D1210C10215039EA00E577F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Splash::Splash";
+			remoteInfo = Splash;
+		};
+		D1210C11215039EB00E577F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Swiftlet::SwiftletTests";
 			remoteInfo = SwiftletTests;
 		};
-		D19457EA214FFD4A00319374 /* PBXContainerItemProxy */ = {
+		D1210C12215039EB00E577F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -77,54 +126,95 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		OBJ_10 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
-		OBJ_11 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		OBJ_16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_11 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		OBJ_13 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		OBJ_19 /* SwiftletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftletTests.swift; sourceTree = "<group>"; };
+		OBJ_26 /* CharacterSet+Contains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Contains.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* Equatable+AnyOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+AnyOf.swift"; sourceTree = "<group>"; };
+		OBJ_30 /* Int+IsOdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+IsOdd.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* Sequence+AnyOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+AnyOf.swift"; sourceTree = "<group>"; };
+		OBJ_33 /* Sequence+Occurrences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Occurrences.swift"; sourceTree = "<group>"; };
+		OBJ_35 /* String+IsNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsNumber.swift"; sourceTree = "<group>"; };
+		OBJ_36 /* String+PrefixChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PrefixChecking.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* String+Removing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Removing.swift"; sourceTree = "<group>"; };
+		OBJ_38 /* Substring+HasSuffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Substring+HasSuffix.swift"; sourceTree = "<group>"; };
+		OBJ_40 /* Grammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
+		OBJ_41 /* SwiftGrammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGrammar.swift; sourceTree = "<group>"; };
+		OBJ_43 /* AttributedStringOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringOutputFormat.swift; sourceTree = "<group>"; };
+		OBJ_44 /* HTMLOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLOutputFormat.swift; sourceTree = "<group>"; };
+		OBJ_45 /* OutputBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputBuilder.swift; sourceTree = "<group>"; };
+		OBJ_46 /* OutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputFormat.swift; sourceTree = "<group>"; };
+		OBJ_48 /* SyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighter.swift; sourceTree = "<group>"; };
+		OBJ_49 /* SyntaxRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxRule.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Theme+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Defaults.swift"; sourceTree = "<group>"; };
+		OBJ_54 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		OBJ_57 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/maxd/Documents/Splash/Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		"Splash::Splash::Product" /* Splash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Swiftlet::Swiftlet::Product" /* Swiftlet */ = {isa = PBXFileReference; lastKnownFileType = text; path = Swiftlet; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftletKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Swiftlet::SwiftletTests::Product" /* SwiftletTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_30 /* Frameworks */ = {
+		OBJ_109 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_31 /* SwiftletKit.framework in Frameworks */,
+				OBJ_110 /* SwiftletKit.framework in Frameworks */,
+				OBJ_111 /* Splash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_44 /* Frameworks */ = {
+		OBJ_125 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_126 /* Splash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_62 /* Frameworks */ = {
+		OBJ_145 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_63 /* SwiftletKit.framework in Frameworks */,
+				OBJ_146 /* SwiftletKit.framework in Frameworks */,
+				OBJ_147 /* Splash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_15 /* Swiftlet */ = {
+		OBJ_10 /* SwiftletKit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* main.swift */,
+				OBJ_11 /* Error.swift */,
+				OBJ_12 /* Lexer.swift */,
+				OBJ_13 /* LineReader.swift */,
+				OBJ_14 /* Result.swift */,
+				OBJ_15 /* Stream.swift */,
+				OBJ_16 /* Token.swift */,
 			);
-			name = Swiftlet;
-			path = Sources/Swiftlet;
+			name = SwiftletKit;
+			path = Sources/SwiftletKit;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_17 /* Tests */ = {
@@ -143,15 +233,132 @@
 			path = SwiftletTests;
 			sourceTree = "<group>";
 		};
-		OBJ_20 /* Products */ = {
+		OBJ_20 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				"Swiftlet::SwiftletTests::Product" /* SwiftletTests.xctest */,
-				"Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */,
-				"Swiftlet::Swiftlet::Product" /* Swiftlet */,
+				OBJ_21 /* Splash */,
 			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_21 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* SplashTokenizer */,
+				OBJ_23 /* Splash */,
+				OBJ_59 /* SplashImageGen */,
+				OBJ_60 /* SplashHTMLGen */,
+				OBJ_61 /* Package.swift */,
+			);
+			name = Splash;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* SplashTokenizer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SplashTokenizer;
+			path = ../Splash/Sources/SplashTokenizer;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_23 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* Extensions */,
+				OBJ_39 /* Grammar */,
+				OBJ_42 /* Output */,
+				OBJ_47 /* Syntax */,
+				OBJ_50 /* Theming */,
+				OBJ_55 /* Tokenizing */,
+			);
+			name = Splash;
+			path = ../Splash/Sources/Splash;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* CharacterSet */,
+				OBJ_27 /* Equatable */,
+				OBJ_29 /* Int */,
+				OBJ_31 /* Sequence */,
+				OBJ_34 /* Strings */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* CharacterSet */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* CharacterSet+Contains.swift */,
+			);
+			path = CharacterSet;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* Equatable */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* Equatable+AnyOf.swift */,
+			);
+			path = Equatable;
+			sourceTree = "<group>";
+		};
+		OBJ_29 /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* Int+IsOdd.swift */,
+			);
+			path = Int;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Sequence+AnyOf.swift */,
+				OBJ_33 /* Sequence+Occurrences.swift */,
+			);
+			path = Sequence;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* String+IsNumber.swift */,
+				OBJ_36 /* String+PrefixChecking.swift */,
+				OBJ_37 /* String+Removing.swift */,
+				OBJ_38 /* Substring+HasSuffix.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		OBJ_39 /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_40 /* Grammar.swift */,
+				OBJ_41 /* SwiftGrammar.swift */,
+			);
+			path = Grammar;
+			sourceTree = "<group>";
+		};
+		OBJ_42 /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* AttributedStringOutputFormat.swift */,
+				OBJ_44 /* HTMLOutputFormat.swift */,
+				OBJ_45 /* OutputBuilder.swift */,
+				OBJ_46 /* OutputFormat.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		OBJ_47 /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_48 /* SyntaxHighlighter.swift */,
+				OBJ_49 /* SyntaxRule.swift */,
+			);
+			path = Syntax;
+			sourceTree = "<group>";
 		};
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
@@ -159,44 +366,118 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_17 /* Tests */,
-				OBJ_20 /* Products */,
+				OBJ_20 /* Dependencies */,
+				OBJ_62 /* Products */,
 			);
 			indentWidth = 2;
 			name = "";
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
+		OBJ_50 /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* Color.swift */,
+				OBJ_52 /* Font.swift */,
+				OBJ_53 /* Theme+Defaults.swift */,
+				OBJ_54 /* Theme.swift */,
+			);
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		OBJ_55 /* Tokenizing */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_56 /* Segment.swift */,
+				OBJ_57 /* TokenType.swift */,
+				OBJ_58 /* Tokenizer.swift */,
+			);
+			path = Tokenizing;
+			sourceTree = "<group>";
+		};
+		OBJ_59 /* SplashImageGen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SplashImageGen;
+			path = ../Splash/Sources/SplashImageGen;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_60 /* SplashHTMLGen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SplashHTMLGen;
+			path = ../Splash/Sources/SplashHTMLGen;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Swiftlet::SwiftletTests::Product" /* SwiftletTests.xctest */,
+				"Splash::Splash::Product" /* Splash.framework */,
+				"Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */,
+				"Swiftlet::Swiftlet::Product" /* Swiftlet */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* SwiftletKit */,
-				OBJ_15 /* Swiftlet */,
+				OBJ_8 /* Swiftlet */,
+				OBJ_10 /* SwiftletKit */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_8 /* SwiftletKit */ = {
+		OBJ_8 /* Swiftlet */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Error.swift */,
-				OBJ_10 /* Lexer.swift */,
-				OBJ_11 /* LineReader.swift */,
-				OBJ_12 /* Result.swift */,
-				OBJ_13 /* Stream.swift */,
-				OBJ_14 /* Token.swift */,
+				OBJ_9 /* main.swift */,
 			);
-			name = SwiftletKit;
-			path = Sources/SwiftletKit;
+			name = Swiftlet;
+			path = Sources/Swiftlet;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		"Splash::Splash" /* Splash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_68 /* Build configuration list for PBXNativeTarget "Splash" */;
+			buildPhases = (
+				OBJ_71 /* Sources */,
+				OBJ_96 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Splash;
+			productName = Splash;
+			productReference = "Splash::Splash::Product" /* Splash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Splash::SwiftPMPackageDescription" /* SplashPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_98 /* Build configuration list for PBXNativeTarget "SplashPackageDescription" */;
+			buildPhases = (
+				OBJ_101 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplashPackageDescription;
+			productName = SplashPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
 		"Swiftlet::SwiftPMPackageDescription" /* SwiftletPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "SwiftletPackageDescription" */;
+			buildConfigurationList = OBJ_129 /* Build configuration list for PBXNativeTarget "SwiftletPackageDescription" */;
 			buildPhases = (
-				OBJ_49 /* Sources */,
+				OBJ_132 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -208,15 +489,16 @@
 		};
 		"Swiftlet::Swiftlet" /* Swiftlet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_25 /* Build configuration list for PBXNativeTarget "Swiftlet" */;
+			buildConfigurationList = OBJ_104 /* Build configuration list for PBXNativeTarget "Swiftlet" */;
 			buildPhases = (
-				OBJ_28 /* Sources */,
-				OBJ_30 /* Frameworks */,
+				OBJ_107 /* Sources */,
+				OBJ_109 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_32 /* PBXTargetDependency */,
+				OBJ_112 /* PBXTargetDependency */,
+				OBJ_114 /* PBXTargetDependency */,
 			);
 			name = Swiftlet;
 			productName = Swiftlet;
@@ -225,14 +507,15 @@
 		};
 		"Swiftlet::SwiftletKit" /* SwiftletKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "SwiftletKit" */;
+			buildConfigurationList = OBJ_115 /* Build configuration list for PBXNativeTarget "SwiftletKit" */;
 			buildPhases = (
-				OBJ_37 /* Sources */,
-				OBJ_44 /* Frameworks */,
+				OBJ_118 /* Sources */,
+				OBJ_125 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_127 /* PBXTargetDependency */,
 			);
 			name = SwiftletKit;
 			productName = SwiftletKit;
@@ -241,15 +524,16 @@
 		};
 		"Swiftlet::SwiftletTests" /* SwiftletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "SwiftletTests" */;
+			buildConfigurationList = OBJ_140 /* Build configuration list for PBXNativeTarget "SwiftletTests" */;
 			buildPhases = (
-				OBJ_60 /* Sources */,
-				OBJ_62 /* Frameworks */,
+				OBJ_143 /* Sources */,
+				OBJ_145 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_64 /* PBXTargetDependency */,
+				OBJ_148 /* PBXTargetDependency */,
+				OBJ_149 /* PBXTargetDependency */,
 			);
 			name = SwiftletTests;
 			productName = SwiftletTests;
@@ -272,10 +556,12 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_20 /* Products */;
+			productRefGroup = OBJ_62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"Splash::Splash" /* Splash */,
+				"Splash::SwiftPMPackageDescription" /* SplashPackageDescription */,
 				"Swiftlet::Swiftlet" /* Swiftlet */,
 				"Swiftlet::SwiftletKit" /* SwiftletKit */,
 				"Swiftlet::SwiftPMPackageDescription" /* SwiftletPackageDescription */,
@@ -287,70 +573,133 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_28 /* Sources */ = {
+		OBJ_101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_29 /* main.swift in Sources */,
+				OBJ_102 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_37 /* Sources */ = {
+		OBJ_107 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_38 /* Error.swift in Sources */,
-				OBJ_39 /* Lexer.swift in Sources */,
-				OBJ_40 /* LineReader.swift in Sources */,
-				OBJ_41 /* Result.swift in Sources */,
-				OBJ_42 /* Stream.swift in Sources */,
-				OBJ_43 /* Token.swift in Sources */,
+				OBJ_108 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_49 /* Sources */ = {
+		OBJ_118 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_50 /* Package.swift in Sources */,
+				OBJ_119 /* Error.swift in Sources */,
+				OBJ_120 /* Lexer.swift in Sources */,
+				OBJ_121 /* LineReader.swift in Sources */,
+				OBJ_122 /* Result.swift in Sources */,
+				OBJ_123 /* Stream.swift in Sources */,
+				OBJ_124 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_60 /* Sources */ = {
+		OBJ_132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_61 /* SwiftletTests.swift in Sources */,
+				OBJ_133 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_143 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_144 /* SwiftletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_72 /* CharacterSet+Contains.swift in Sources */,
+				OBJ_73 /* Equatable+AnyOf.swift in Sources */,
+				OBJ_74 /* Int+IsOdd.swift in Sources */,
+				OBJ_75 /* Sequence+AnyOf.swift in Sources */,
+				OBJ_76 /* Sequence+Occurrences.swift in Sources */,
+				OBJ_77 /* String+IsNumber.swift in Sources */,
+				OBJ_78 /* String+PrefixChecking.swift in Sources */,
+				OBJ_79 /* String+Removing.swift in Sources */,
+				OBJ_80 /* Substring+HasSuffix.swift in Sources */,
+				OBJ_81 /* Grammar.swift in Sources */,
+				OBJ_82 /* SwiftGrammar.swift in Sources */,
+				OBJ_83 /* AttributedStringOutputFormat.swift in Sources */,
+				OBJ_84 /* HTMLOutputFormat.swift in Sources */,
+				OBJ_85 /* OutputBuilder.swift in Sources */,
+				OBJ_86 /* OutputFormat.swift in Sources */,
+				OBJ_87 /* SyntaxHighlighter.swift in Sources */,
+				OBJ_88 /* SyntaxRule.swift in Sources */,
+				OBJ_89 /* Color.swift in Sources */,
+				OBJ_90 /* Font.swift in Sources */,
+				OBJ_91 /* Theme+Defaults.swift in Sources */,
+				OBJ_92 /* Theme.swift in Sources */,
+				OBJ_93 /* Segment.swift in Sources */,
+				OBJ_94 /* TokenType.swift in Sources */,
+				OBJ_95 /* Tokenizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_32 /* PBXTargetDependency */ = {
+		OBJ_112 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Swiftlet::SwiftletKit" /* SwiftletKit */;
-			targetProxy = D19457E7214FFD4900319374 /* PBXContainerItemProxy */;
+			targetProxy = D1210C0C215039EA00E577F0 /* PBXContainerItemProxy */;
 		};
-		OBJ_55 /* PBXTargetDependency */ = {
+		OBJ_114 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Splash::Splash" /* Splash */;
+			targetProxy = D1210C0E215039EA00E577F0 /* PBXContainerItemProxy */;
+		};
+		OBJ_127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Splash::Splash" /* Splash */;
+			targetProxy = D1210C0D215039EA00E577F0 /* PBXContainerItemProxy */;
+		};
+		OBJ_138 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Swiftlet::SwiftletTests" /* SwiftletTests */;
-			targetProxy = D19457E9214FFD4A00319374 /* PBXContainerItemProxy */;
+			targetProxy = D1210C11215039EB00E577F0 /* PBXContainerItemProxy */;
 		};
-		OBJ_64 /* PBXTargetDependency */ = {
+		OBJ_148 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Swiftlet::SwiftletKit" /* SwiftletKit */;
-			targetProxy = D19457E8214FFD4900319374 /* PBXContainerItemProxy */;
+			targetProxy = D1210C0F215039EA00E577F0 /* PBXContainerItemProxy */;
 		};
-		OBJ_69 /* PBXTargetDependency */ = {
+		OBJ_149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Splash::Splash" /* Splash */;
+			targetProxy = D1210C10215039EA00E577F0 /* PBXContainerItemProxy */;
+		};
+		OBJ_154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Swiftlet::Swiftlet" /* Swiftlet */;
-			targetProxy = D19457EA214FFD4A00319374 /* PBXContainerItemProxy */;
+			targetProxy = D1210C12215039EB00E577F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_26 /* Debug */ = {
+		OBJ_100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-10GM.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_105 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -371,7 +720,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_27 /* Release */ = {
+		OBJ_106 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -389,6 +738,138 @@
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.0;
 				TARGET_NAME = Swiftlet;
+			};
+			name = Release;
+		};
+		OBJ_116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftletKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftletKit;
+			};
+			name = Debug;
+		};
+		OBJ_117 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftletKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftletKit;
+			};
+			name = Release;
+		};
+		OBJ_130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-10GM.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-10GM.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftletTests;
+			};
+			name = Debug;
+		};
+		OBJ_142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftletTests;
+			};
+			name = Release;
+		};
+		OBJ_152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 			};
 			name = Release;
 		};
@@ -418,54 +899,6 @@
 			};
 			name = Debug;
 		};
-		OBJ_35 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftletKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftletKit;
-			};
-			name = Debug;
-		};
-		OBJ_36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftletKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftletKit;
-			};
-			name = Release;
-		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,7 +919,55 @@
 			};
 			name = Release;
 		};
-		OBJ_47 /* Debug */ = {
+		OBJ_69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/Splash_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Splash;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Splash;
+			};
+			name = Debug;
+		};
+		OBJ_70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftlet.xcodeproj/Splash_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Splash;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Splash;
+			};
+			name = Release;
+		};
+		OBJ_99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -494,85 +975,64 @@
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
-		};
-		OBJ_48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-10GM.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftletTests;
-			};
-			name = Debug;
-		};
-		OBJ_59 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Swiftlet.xcodeproj/SwiftletTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftletTests;
-			};
-			name = Release;
-		};
-		OBJ_67 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		OBJ_104 /* Build configuration list for PBXNativeTarget "Swiftlet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_105 /* Debug */,
+				OBJ_106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_115 /* Build configuration list for PBXNativeTarget "SwiftletKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_116 /* Debug */,
+				OBJ_117 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_129 /* Build configuration list for PBXNativeTarget "SwiftletPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_130 /* Debug */,
+				OBJ_131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_135 /* Build configuration list for PBXAggregateTarget "SwiftletPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_136 /* Debug */,
+				OBJ_137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_140 /* Build configuration list for PBXNativeTarget "SwiftletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_141 /* Debug */,
+				OBJ_142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_151 /* Build configuration list for PBXAggregateTarget "swiftlet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_152 /* Debug */,
+				OBJ_153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Swiftlet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -582,56 +1042,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_25 /* Build configuration list for PBXNativeTarget "Swiftlet" */ = {
+		OBJ_68 /* Build configuration list for PBXNativeTarget "Splash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_26 /* Debug */,
-				OBJ_27 /* Release */,
+				OBJ_69 /* Debug */,
+				OBJ_70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_34 /* Build configuration list for PBXNativeTarget "SwiftletKit" */ = {
+		OBJ_98 /* Build configuration list for PBXNativeTarget "SplashPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_35 /* Debug */,
-				OBJ_36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_46 /* Build configuration list for PBXNativeTarget "SwiftletPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_47 /* Debug */,
-				OBJ_48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_52 /* Build configuration list for PBXAggregateTarget "SwiftletPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_53 /* Debug */,
-				OBJ_54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_57 /* Build configuration list for PBXNativeTarget "SwiftletTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_58 /* Debug */,
-				OBJ_59 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_66 /* Build configuration list for PBXAggregateTarget "swiftlet" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_67 /* Debug */,
-				OBJ_68 /* Release */,
+				OBJ_99 /* Debug */,
+				OBJ_100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
