@@ -5,62 +5,56 @@
 //  Created by Max Desiatov on 16/09/2018.
 //
 
-enum Result<T> {
-    case success(T)
-    case failure(Error)
-
-    func lift<T2>() -> Result<T2>? {
-        guard case .failure(let error) = self else {
-            return nil
-        }
-
-        return .failure(error)
-    }
-}
-
 protocol Consumer {
-    associatedtype Input
+  associatedtype Input
 
-    func next(_ input: Input)
+  func next(_ input: Input)
 }
 
 protocol Producer {
-    associatedtype Output
+  associatedtype Output
 
-    mutating func next() -> Result<Output>?
+  mutating func next() -> [Result<Output>]
 }
 
 protocol Transformer {
-    associatedtype Input
-    associatedtype Output
+  associatedtype Input
+  associatedtype Output
 
-    func next(_ input: Input) -> Result<Output>?
+  func next(_ input: Input) -> [Result<Output>]
 }
 
-
 struct Chain<P, T>: Producer
-    where P: Producer, T: Transformer, P.Output == T.Input
+where P: Producer, T: Transformer, P.Output == T.Input
 {
-    var producer: P
-    let transformer: T
-    var isFinished: Bool
+  var producer: P
+  let transformer: T
+  var isFinished: Bool
 
-    mutating func next() -> Result<T.Output>? {
-        guard let value = producer.next() else {
-            isFinished = true
-            return nil
-        }
-
-        guard case .success(let output) = value else {
-            return value.lift()
-        }
-
-        return transformer.next(output)
+  mutating func next() -> [Result<T.Output>] {
+    let values = producer.next()
+    guard values.count > 0 else {
+      isFinished = true
+      return []
     }
+
+    let x = values.flatMap { producerOutput -> [Result<T.Output>] in
+      guard case .success(let output) = producerOutput else {
+        if let lifted: Result<T.Output> = producerOutput.lift() {
+          return [lifted]
+        }
+
+        return []
+      }
+      return self.transformer.next(output)
+    }
+
+    return x
+  }
 }
 
 extension Producer {
-    func pipe<T>(_ transformer: T) -> Chain<Self, T> {
-        return Chain(producer: self, transformer: transformer, isFinished: false)
-    }
+  func pipe<T>(_ transformer: T) -> Chain<Self, T> {
+      return Chain(producer: self, transformer: transformer, isFinished: false)
+  }
 }

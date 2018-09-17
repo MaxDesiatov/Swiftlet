@@ -32,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D1270589214FA5E300151CDB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1270588214FA5E300151CDB /* Result.swift */; };
+		D127058B214FA85500151CDB /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D127058A214FA85500151CDB /* Tokenizer.swift */; };
 		OBJ_22 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Stream.swift */; };
 		OBJ_23 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* main.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -63,12 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1270588214FA5E300151CDB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D127058A214FA85500151CDB /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		OBJ_10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_13 /* SwiftletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftletTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
-		"Swiftlet::Swiftlet::Product" /* Swiftlet */ = {isa = PBXFileReference; lastKnownFileType = text; path = Swiftlet; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Swiftlet::SwiftletTests::Product" /* SwiftletTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Swiftlet::Swiftlet::Product" /* Swiftlet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Swiftlet; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Swiftlet::SwiftletTests::Product" /* SwiftletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SwiftletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +142,10 @@
 		OBJ_8 /* Swiftlet */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Stream.swift */,
 				OBJ_10 /* main.swift */,
+				D1270588214FA5E300151CDB /* Result.swift */,
+				OBJ_9 /* Stream.swift */,
+				D127058A214FA85500151CDB /* Tokenizer.swift */,
 			);
 			path = Swiftlet;
 			sourceTree = "<group>";
@@ -201,6 +207,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"Swiftlet::Swiftlet" = {
+						LastSwiftMigration = 1000;
+					};
+					"Swiftlet::SwiftletTests" = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Swiftlet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -228,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				D1270589214FA5E300151CDB /* Result.swift in Sources */,
+				D127058B214FA85500151CDB /* Tokenizer.swift in Sources */,
 				OBJ_22 /* Stream.swift in Sources */,
 				OBJ_23 /* main.swift in Sources */,
 			);
@@ -286,7 +302,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Swiftlet;
 			};
 			name = Debug;
@@ -307,7 +323,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Swiftlet;
 			};
 			name = Release;
@@ -384,7 +400,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SwiftletTests;
 			};
 			name = Debug;
@@ -405,7 +421,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SwiftletTests;
 			};
 			name = Release;
