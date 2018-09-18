@@ -7,10 +7,16 @@
 
 import Splash
 
-public struct Lexer: Transformer {
+public enum SplashToken {
+  case splash(String, Splash.TokenType)
+  case plainText(String)
+  case whitespace(String)
+}
+
+public struct SplashLexer: Transformer {
   let highlighter = SyntaxHighlighter(format: LexerOutputFormat())
 
-  public func next(_ value: String) -> [Result<TokenType>] {
+  public func next(_ value: String) -> [Result<SplashToken>] {
     return highlighter.highlight(value).map(Result.success)
   }
 
@@ -20,21 +26,22 @@ public struct Lexer: Transformer {
 
 struct LexerOutputFormat {
   struct Builder: OutputBuilder {
-    private var components = [TokenType]()
+    private var tokens = [SplashToken]()
 
     mutating func addToken(_ token: String, ofType type: TokenType) {
-      components.append(type)
+      tokens.append(.splash(token, type))
     }
 
     mutating func addPlainText(_ text: String) {
+      tokens.append(.plainText(text))
     }
 
     mutating func addWhitespace(_ whitespace: String) {
-      // Ignore whitespace
+      tokens.append(.whitespace(whitespace))
     }
 
-    func build() -> [TokenType] {
-      return components
+    func build() -> [SplashToken] {
+      return tokens
     }
   }
 }

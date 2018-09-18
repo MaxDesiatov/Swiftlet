@@ -7,8 +7,7 @@
 
 import SwiftletKit
 
-let reader = LineReader(path: "Sources/Swiftlet/Result.swift")!
+let testString = "func hello(world: String) -> Int"
+let lexer = SplashLexer()
+print(lexer.next(testString))
 
-var pipeline = reader.pipe(Lexer())
-
-print(pipeline.next())

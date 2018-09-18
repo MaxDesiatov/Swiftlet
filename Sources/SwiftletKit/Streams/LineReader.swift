@@ -7,7 +7,12 @@
 
 import Foundation
 
+/// This is implemented as a class as we don't want to create
+/// readers using the same file handle by accident when assigning a reader
+/// instance.
 public final class LineReader: Producer {
+  public typealias Output = Substring
+
   private let path: String
   private let handle: FileHandle
   private var leftoverChunk: Substring?

@@ -32,15 +32,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D1B77A5C2150E8B700C2D330 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A582150E83D00C2D330 /* Lexer.swift */; };
+		D1B77A5D2150E8B700C2D330 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A592150E83D00C2D330 /* Stream.swift */; };
+		D1B77A5E2150E8B700C2D330 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A5A2150E83D00C2D330 /* LineReader.swift */; };
+		D1B77A5F2150E8B700C2D330 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A5B2150E83D00C2D330 /* FileReader.swift */; };
 		OBJ_102 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Package.swift */; };
 		OBJ_108 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_110 /* SwiftletKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Swiftlet::SwiftletKit::Product" /* SwiftletKit.framework */; };
 		OBJ_111 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Splash::Splash::Product" /* Splash.framework */; };
 		OBJ_119 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Error.swift */; };
-		OBJ_120 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Lexer.swift */; };
-		OBJ_121 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* LineReader.swift */; };
 		OBJ_122 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Result.swift */; };
-		OBJ_123 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Stream.swift */; };
 		OBJ_124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Token.swift */; };
 		OBJ_126 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Splash::Splash::Product" /* Splash.framework */; };
 		OBJ_133 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -126,11 +127,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1B77A582150E83D00C2D330 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		D1B77A592150E83D00C2D330 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		D1B77A5A2150E83D00C2D330 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
+		D1B77A5B2150E83D00C2D330 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
-		OBJ_13 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		OBJ_15 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		OBJ_16 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		OBJ_19 /* SwiftletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftletTests.swift; sourceTree = "<group>"; };
 		OBJ_26 /* CharacterSet+Contains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Contains.swift"; sourceTree = "<group>"; };
@@ -203,14 +205,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1B77A572150E83D00C2D330 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				D1B77A582150E83D00C2D330 /* Lexer.swift */,
+				D1B77A592150E83D00C2D330 /* Stream.swift */,
+				D1B77A5A2150E83D00C2D330 /* LineReader.swift */,
+				D1B77A5B2150E83D00C2D330 /* FileReader.swift */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* SwiftletKit */ = {
 			isa = PBXGroup;
 			children = (
+				D1B77A572150E83D00C2D330 /* Streams */,
 				OBJ_11 /* Error.swift */,
-				OBJ_12 /* Lexer.swift */,
-				OBJ_13 /* LineReader.swift */,
 				OBJ_14 /* Result.swift */,
-				OBJ_15 /* Stream.swift */,
 				OBJ_16 /* Token.swift */,
 			);
 			name = SwiftletKit;
@@ -360,7 +371,7 @@
 			path = Syntax;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -370,7 +381,6 @@
 				OBJ_62 /* Products */,
 			);
 			indentWidth = 2;
-			name = "";
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
@@ -555,7 +565,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,11 +604,12 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_119 /* Error.swift in Sources */,
-				OBJ_120 /* Lexer.swift in Sources */,
-				OBJ_121 /* LineReader.swift in Sources */,
 				OBJ_122 /* Result.swift in Sources */,
-				OBJ_123 /* Stream.swift in Sources */,
+				D1B77A5F2150E8B700C2D330 /* FileReader.swift in Sources */,
+				D1B77A5C2150E8B700C2D330 /* Lexer.swift in Sources */,
 				OBJ_124 /* Token.swift in Sources */,
+				D1B77A5E2150E8B700C2D330 /* LineReader.swift in Sources */,
+				D1B77A5D2150E8B700C2D330 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
