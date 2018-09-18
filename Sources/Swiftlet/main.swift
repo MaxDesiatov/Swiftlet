@@ -7,7 +7,11 @@
 
 import SwiftletKit
 
-let testString = "func hello(world: String) -> Int"
+let testString = """
+func hello(world: String) -> Int{
+  return 42 + world.count
+}
+"""
 let lexer = SplashLexer()
 print(lexer.next(testString))
 
