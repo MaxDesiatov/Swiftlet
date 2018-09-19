@@ -32,6 +32,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D1431A2921527BF100BFFB04 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1431A2821527BF100BFFB04 /* Parser.swift */; };
+		D1431A2B21527C5C00BFFB04 /* SyntaxTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1431A2A21527C5C00BFFB04 /* SyntaxTree.swift */; };
+		D1431A2F215284E100BFFB04 /* ScopeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1431A2E215284E100BFFB04 /* ScopeTree.swift */; };
 		D1B77A5C2150E8B700C2D330 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A582150E83D00C2D330 /* Lexer.swift */; };
 		D1B77A5D2150E8B700C2D330 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A592150E83D00C2D330 /* Stream.swift */; };
 		D1B77A5E2150E8B700C2D330 /* LineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B77A5A2150E83D00C2D330 /* LineReader.swift */; };
@@ -127,6 +130,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1431A2821527BF100BFFB04 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D1431A2A21527C5C00BFFB04 /* SyntaxTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTree.swift; sourceTree = "<group>"; };
+		D1431A2E215284E100BFFB04 /* ScopeTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeTree.swift; sourceTree = "<group>"; };
 		D1B77A582150E83D00C2D330 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		D1B77A592150E83D00C2D330 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		D1B77A5A2150E83D00C2D330 /* LineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReader.swift; sourceTree = "<group>"; };
@@ -205,13 +211,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1431A2C2152849300BFFB04 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				D1431A2821527BF100BFFB04 /* Parser.swift */,
+				D1431A2A21527C5C00BFFB04 /* SyntaxTree.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		D1431A2D215284A400BFFB04 /* Semantics */ = {
+			isa = PBXGroup;
+			children = (
+				D1431A2E215284E100BFFB04 /* ScopeTree.swift */,
+			);
+			path = Semantics;
+			sourceTree = "<group>";
+		};
 		D1B77A572150E83D00C2D330 /* Streams */ = {
 			isa = PBXGroup;
 			children = (
-				D1B77A582150E83D00C2D330 /* Lexer.swift */,
+				D1431A2D215284A400BFFB04 /* Semantics */,
+				D1431A2C2152849300BFFB04 /* Parser */,
 				D1B77A592150E83D00C2D330 /* Stream.swift */,
 				D1B77A5A2150E83D00C2D330 /* LineReader.swift */,
 				D1B77A5B2150E83D00C2D330 /* FileReader.swift */,
+				D1B77A582150E83D00C2D330 /* Lexer.swift */,
 			);
 			path = Streams;
 			sourceTree = "<group>";
@@ -636,7 +661,9 @@
 				OBJ_72 /* CharacterSet+Contains.swift in Sources */,
 				OBJ_73 /* Equatable+AnyOf.swift in Sources */,
 				OBJ_74 /* Int+IsOdd.swift in Sources */,
+				D1431A2F215284E100BFFB04 /* ScopeTree.swift in Sources */,
 				OBJ_75 /* Sequence+AnyOf.swift in Sources */,
+				D1431A2B21527C5C00BFFB04 /* SyntaxTree.swift in Sources */,
 				OBJ_76 /* Sequence+Occurrences.swift in Sources */,
 				OBJ_77 /* String+IsNumber.swift in Sources */,
 				OBJ_78 /* String+PrefixChecking.swift in Sources */,
@@ -650,6 +677,7 @@
 				OBJ_86 /* OutputFormat.swift in Sources */,
 				OBJ_87 /* SyntaxHighlighter.swift in Sources */,
 				OBJ_88 /* SyntaxRule.swift in Sources */,
+				D1431A2921527BF100BFFB04 /* Parser.swift in Sources */,
 				OBJ_89 /* Color.swift in Sources */,
 				OBJ_90 /* Font.swift in Sources */,
 				OBJ_91 /* Theme+Defaults.swift in Sources */,
