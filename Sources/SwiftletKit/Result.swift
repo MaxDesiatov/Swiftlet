@@ -1,6 +1,6 @@
 //
 //  Result.swift
-//  Swiftlet
+//  SwiftletKit
 //
 //  Created by Max Desiatov on 17/09/2018.
 //

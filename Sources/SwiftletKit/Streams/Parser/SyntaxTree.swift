@@ -1,6 +1,6 @@
 //
 //  SwiftAST.swift
-//  Splash
+//  SwiftletKit
 //
 //  Created by Max Desiatov on 19/09/2018.
 //

@@ -1,6 +1,6 @@
 //
 //  Stream.swift
-//  Swiftlet
+//  SwiftletKit
 //
 //  Created by Max Desiatov on 16/09/2018.
 //
