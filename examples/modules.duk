@@ -1,0 +1,47 @@
+module A {
+  let i: Int
+  let b: String
+  let f: (Int, String) -> String
+}
+
+let M1 = import Blah as A
+
+module F<T> {
+  let x: T
+}
+
+let M2 = import Code as F<Int>
+
+interface XInt {
+  let x: Int
+}
+
+module Increment<M: XInt> -> XInt {
+  let x = M.x + 1
+}
+
+module Three {
+  let x = 3
+}
+
+module Four = Increment<Three>
+
+// generalized existentials vs higher kinded types?
+struct Joiner<a>
+{
+  let rows: Sequence where Element = a
+
+  let joined: () -> FlattenSequence<Sequence where Element = a>
+  let joined = { rows.joined() }
+}
+
+struct Rc<t> {
+  let val: t
+}
+
+// a: A<Array, Int>
+let a = A { x: [1, 2, 3] }
+
+// f: (a, a performs e -> b) performs e -> b
+let f = { x, g in g(x) }
+
