@@ -28,7 +28,9 @@ public final class FileReader: Producer {
     guard !d.isEmpty else { return [] }
 
     guard let s = String(data: d, encoding: .utf8) else {
-      return [.failure(SError.lineReaderError("Can't read file \(path) in UTF-8"))]
+      return [.failure(
+        SError.lineReaderError("Can't read file \(path) in UTF-8")
+      )]
     }
 
     return [.success(s)]

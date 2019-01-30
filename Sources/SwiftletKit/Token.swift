@@ -5,7 +5,7 @@
 //  Created by Max Desiatov on 17/09/2018.
 //
 
-//enum KeywordType: String {
+// enum KeywordType: String {
 //  case `let`
 //  case `var`
 //  case `return`
@@ -38,32 +38,32 @@
 //  case `get`
 //  case `didSet`
 //  case `willSet`
-//}
+// }
 //
-//public struct Token {
+// public struct Token {
 //  let line: Int
 //  let lineLocation: Range<String.Index>
 //  let type: TokenType
 
-  /// This excludes any delimiters, e.g. # for directives, @ for attributes,
-  /// quotes for strings etc
+/// This excludes any delimiters, e.g. # for directives, @ for attributes,
+/// quotes for strings etc
 //  let value: Substring
-//}
+// }
 
-//enum BracketType {
+// enum BracketType {
 //  case curly
 //  case paren
 //  case angle
 //  case square
-//}
+// }
 //
-//enum LiteralType {
+// enum LiteralType {
 //  case bool(Bool)
 //  case number
 //  case string
-//}
+// }
 
-//enum TokenType {
+// enum TokenType {
 //  case space
 //  case newline
 //  case tab
@@ -84,4 +84,4 @@
 //  case attribute
 //  case doubleQuote
 //  case backtick
-//}
+// }

@@ -25,8 +25,7 @@ public protocol Transformer {
 }
 
 public final class Chain<P, T>: Producer
-where P: Producer, T: Transformer, P.Output == T.Input
-{
+  where P: Producer, T: Transformer, P.Output == T.Input {
   private var producer: P
   private let transformer: T
   private(set) var isFinished: Bool
@@ -39,7 +38,7 @@ where P: Producer, T: Transformer, P.Output == T.Input
     }
 
     return values.flatMap { producerOutput -> [Result<T.Output>] in
-      guard case .success(let output) = producerOutput else {
+      guard case let .success(output) = producerOutput else {
         if let lifted: Result<T.Output> = producerOutput.lift() {
           return [lifted]
         }
@@ -59,6 +58,6 @@ where P: Producer, T: Transformer, P.Output == T.Input
 
 public extension Producer {
   func pipe<T>(_ transformer: T) -> Chain<Self, T> {
-      return Chain(producer: self, transformer: transformer)
+    return Chain(producer: self, transformer: transformer)
   }
 }

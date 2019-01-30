@@ -14,4 +14,3 @@ func hello(world: String) -> Int{
 """
 let lexer = SplashLexer()
 print(lexer.next(testString))
-

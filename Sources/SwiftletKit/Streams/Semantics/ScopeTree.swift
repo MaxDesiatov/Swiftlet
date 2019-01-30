@@ -119,9 +119,3 @@ enum DeclarationType {
   case `associatedtype`
   case function
 }
-
-struct Declaration {
-  let type: DeclarationType
-  let body: [Statement]
-}
-

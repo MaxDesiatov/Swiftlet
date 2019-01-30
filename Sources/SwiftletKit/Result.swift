@@ -10,7 +10,7 @@ public enum Result<T> {
   case failure(Error)
 
   var success: T? {
-    guard case .success(let s) = self else {
+    guard case let .success(s) = self else {
       return nil
     }
 
@@ -18,7 +18,7 @@ public enum Result<T> {
   }
 
   var failure: Error? {
-    guard case .failure(let e) = self else {
+    guard case let .failure(e) = self else {
       return nil
     }
 
@@ -26,7 +26,7 @@ public enum Result<T> {
   }
 
   func lift<T2>() -> Result<T2>? {
-    guard case .failure(let error) = self else {
+    guard case let .failure(error) = self else {
       return nil
     }
 

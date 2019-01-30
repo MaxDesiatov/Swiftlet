@@ -10,4 +10,3 @@ import Foundation
 enum SError: Error {
   case lineReaderError(String)
 }
-

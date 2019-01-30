@@ -19,7 +19,8 @@ public final class LineReader: Producer {
   private let chunkLength: Int
 
   public init?(path: String, chunkLength: Int = 120) {
-    guard let handle = FileHandle(forReadingAtPath: path), chunkLength > 0 else {
+    guard
+      let handle = FileHandle(forReadingAtPath: path), chunkLength > 0 else {
       return nil
     }
 
@@ -32,9 +33,14 @@ public final class LineReader: Producer {
     var result = [Substring]()
     var chunk: String
     repeat {
-      guard let c = String(data: handle.readData(ofLength: chunkLength), encoding: .utf8)
+      guard let c = String(
+        data: handle.readData(ofLength: chunkLength),
+        encoding: .utf8
+      )
       else {
-        return [.failure(SError.lineReaderError("Can't read file \(path) in UTF-8"))]
+        return [.failure(
+          SError.lineReaderError("Can't read file \(path) in UTF-8")
+        )]
       }
       chunk = c
 
@@ -71,9 +77,7 @@ public final class LineReader: Producer {
           result[0] = lc + result[0]
         }
         leftoverChunk = result.removeLast()
-      }
-      // setting leftoverChunk from the only result item
-      else if result.count == 1 {
+      } else if result.count == 1 {
         if let lc = leftoverChunk {
           leftoverChunk = lc + result[0]
         } else {
